@@ -7,8 +7,8 @@ spec:
     server: https://acme-v02.api.letsencrypt.org/directory
     email: thakraltisha@gmail.com
     privateKeySecretRef:
-      name: quote-collector-prod-secret
+      name: letsencrypt-prod-account-key
     solvers:
       - http01:
           ingress:
-            class: nginx
+            ingressClassName: nginx
