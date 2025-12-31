@@ -17,16 +17,4 @@ spec:
         image: tishathakral/quote-collector:00b3e5c411eb5efe70debf2e56159302b6a35fe3
         ports: 
         - containerPort: 3000
----
-apiVersion: v1
-kind: Service
-metadata: 
-  name: quote-collector-service
-spec: 
-  selector:
-    app: quoteCollector
-  ports:
-    - protocol: TCP
-      port: 3000
-      targetPort: 3000
-  type: ClusterIP
+

@@ -3,14 +3,13 @@ kind: Ingress
 metadata:
   name: quote-collector-ingress
   annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"
-    nginx.ingress.kubernetes.io/x-forward-proto: "https"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
         - test.narottamchy.in
-      secretName: my-tls-secret
+      secretName: quote-collector-prod-secret
   rules:
     - host: test.narottamchy.in
       http:
@@ -21,4 +20,4 @@ spec:
               service:
                 name: quote-collector-service
                 port:
-                  number: 3000
+                  number: 80
