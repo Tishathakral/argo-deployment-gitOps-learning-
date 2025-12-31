@@ -14,7 +14,7 @@ spec:
     spec:
       containers: 
       - name: frontend
-        image: tishathakral/quote-collector:ddfbc1da3818ee2099d66b5aa8d9342f6ccc7254
+        image: tishathakral/quote-collector:00b3e5c411eb5efe70debf2e56159302b6a35fe3
         ports: 
         - containerPort: 80
 ---
